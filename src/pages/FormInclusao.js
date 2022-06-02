@@ -8,8 +8,9 @@ class FormInclusao extends React.Component {
       description, siglas, onClickDespesas, text } = this.props;
     return (
       <form className="container-form">
+      
         <label htmlFor="value-input">
-          Valor
+        <span> Valor</span>
           <input
             id="value-input"
             data-testid="value-input"
@@ -21,7 +22,7 @@ class FormInclusao extends React.Component {
           />
         </label>
         <label htmlFor="description-input">
-          Descrição
+          <span>Descrição</span>
           <input
             id="description-input"
             data-testid="description-input"
@@ -32,8 +33,9 @@ class FormInclusao extends React.Component {
             className="description-input"
           />
         </label>
+        
         <label htmlFor="select-sigla">
-          Moeda
+          <span>Moeda</span>
           <select
             className="select"
             name="currency"
@@ -47,7 +49,7 @@ class FormInclusao extends React.Component {
           </select>
         </label>
         <label htmlFor="method">
-          Método
+          <span>Método</span>
           <select
             name="method"
             id="method"
@@ -61,7 +63,7 @@ class FormInclusao extends React.Component {
           </select>
         </label>
         <label htmlFor="tag">
-          Categoria
+          <span>Categoria</span>
           <select
             name="tag"
             id="tag"
