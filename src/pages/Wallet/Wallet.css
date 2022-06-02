@@ -1,0 +1,104 @@
+.all-containter-wallet{
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.container-table{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+table {
+  border-collapse: collapse;   
+  border-radius: 4px;
+ width: 80%;
+  
+}
+table thead{
+  background-color:  #8bb5ff;
+   color: white;
+   width: 80%;
+}
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+tbody tr:nth-child(even) {background-color: #78a2eb21}
+
+td:first-of-type {
+  border-right-color: transparent;
+}
+.button-edit{
+  background-color: transparent;
+  border: none;
+}
+.button-edit:hover{
+  cursor: pointer;
+}
+.button-excluir{
+
+  background-color: transparent;
+  border: none;
+}
+.button-excluir:hover{
+  cursor: pointer;
+}
+.td-descripion{
+  word-break: break-word
+}
+@media only screen and (min-width : 900px) {
+  table{
+    width: 50%;
+  }
+  table thead{
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width : 800px) {
+  table{
+    width: 600px;
+  }
+  table thead{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width : 600px) {
+  table{
+    width: 300px;
+  }
+  table thead{
+    font-size: 8px;
+  }
+  .td-descripion{
+    display: none;
+  }
+  .td-Real{
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width : 250px) {
+  table{
+    width: 300px;
+  }
+  table thead{
+    font-size: px;
+  }
+  .td-descripion{
+    display: none;
+  }
+  .td-Real{
+    display: none;
+  }
+}
+/*
+@media screen and (max-width: 480px){
+  .content{width: 94%;}
+
+  .rTable thead{display:none;}
+  .rTable tbody td{display: flex; flex-direction: column; }
+}
+*/
