@@ -8,7 +8,7 @@ class FormAlteracao extends React.Component {
     return (
       <form className="container-form">
         <label htmlFor="value-input">
-          Valor:
+          <span> Valor</span>
           <input
             id="value-input"
             data-testid="value-input"
@@ -20,19 +20,21 @@ class FormAlteracao extends React.Component {
           />
         </label>
         <label htmlFor="description-input">
-          Descrição:
+          <span>Descrição</span>
           <input
             id="description-input"
             data-testid="description-input"
             type="text"
             name="description"
             value={ description }
+            className="description-input"
             onChange={ onHandleChange }
           />
         </label>
         <label htmlFor="select-sigla">
-          Moeda:
+          <span>Moeda</span>
           <select
+            className="select"
             name="currency"
             data-testid="currency-input"
             onChange={ onHandleChange }
@@ -51,12 +53,14 @@ class FormAlteracao extends React.Component {
           </select>
         </label>
         <label htmlFor="method">
+        <span>Método</span>
           <select
             name="method"
             id="method"
             onChange={ onHandleChange }
             data-testid="method-input"
             defaultValue={ method === value }
+            className="select"
           >
             <option
               value="Dinheiro"
@@ -82,13 +86,13 @@ class FormAlteracao extends React.Component {
           </select>
         </label>
         <label htmlFor="tag">
-          Categoria:
+          <span>Categoria</span>
           <select
             name="tag"
             id="tag"
             onChange={ onHandleChange }
             data-testid="tag-input"
-
+            className="select"
           >
             <option
               value="Alimentação"
@@ -125,6 +129,7 @@ class FormAlteracao extends React.Component {
           type="button"
           id="button-despesas"
           onClick={ onClickDespesas }
+          className="button-despesas"
         >
           {text}
         </button>

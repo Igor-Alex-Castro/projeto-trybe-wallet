@@ -1,0 +1,65 @@
+.value-input{
+  height: 30px;
+  border: none;
+  border: solid 1px #8bb5ff;
+  border-radius: 5px;
+  margin: 0 10px;
+  width: 50px;
+}
+.container-form{
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+.description-input{
+  height: 30px;
+  border: solid 1px #8bb5ff !important;
+  border-radius: 5px;
+  margin: 0 10px;
+  width: 100px;
+  background-color: white !important;
+}
+.select{
+  height: 30px;
+  border: solid 1px #8bb5ff !important;
+  background-color: white;
+  margin: 0 10px;
+  width: 100px;
+  border-radius: 5px;
+}
+.button-despesas {
+
+  height: 30px;
+  border-radius: 5px;
+  background-color: #8bb5ff;
+  border: #8bb5ff;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 0px 10px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 1000px){
+  .container-form{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-form span{
+    width: 100px;
+    margin: 0 5px;
+  }
+  label{
+    margin-top: 20px ;
+    display: flex;
+    align-items: center;
+  }
+  .value-input{
+    width: 100px;
+  }
+  .button-despesas{
+    margin-top: 20px;
+  }
+}

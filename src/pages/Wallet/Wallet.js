@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { fecthApiCorrencies, addDepesas, removeDepesa,
   editDispesa, salvarEdit } from '../../actions';
 import Header from '../../componentes/Header';
-import FormAlteracao from '../FormAlteracao';
-import FormInclusao from '../FormInclusao';
+import FormAlteracao from '../FormeAlteracao/FormAlteracao';
+import FormInclusao from '../FormInclusao/FormInclusao';
 import './Wallet.css';
-import imgEdit from '../editar.png';
-import imgExcluir from '../excluir.png';
+import imgEdit from '../images/editar.png';
+import imgExcluir from '../images/excluir.png';
 
 class Wallet extends React.Component {
   constructor() {
@@ -98,27 +98,27 @@ class Wallet extends React.Component {
               currency={ currency }
             />
           )}
-        <div className="container-table">
+        <div className="container-table box">
 
-          <table className="table">
+          <table className="table" id="my_table">
             <thead>
               <tr>
                 <th>Descrição</th>
-                <th scope="col">Tag</th>
-                <th scope="col">Método de pagamento</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Moeda</th>
-                <th scope="col">Câmbio utilizado</th>
-                <th scope="col">Valor convertido</th>
-                <th scope="col">Moeda de conversão</th>
-                <th scope="col">Editar/Excluir</th>
+                <th>Tag</th>
+                <th>Método de pagamento</th>
+                <th>Valor</th>
+                <th>Moeda</th>
+                <th>Câmbio utilizado</th>
+                <th>Valor convertido</th>
+                <th>Moeda de conversão</th>
+                <th>Editar/Excluir</th>
               </tr>
             </thead>
             <tbody>
               {
                 listExpenses.length > 0 && listExpenses.map((expense) => (
                   <tr key={ expense.id }>
-                    <td className="td-descripion">{expense.description}</td>
+                    <td className="td-descripion">{expense.description !== ""? expense.description : "---"}</td>
                     <td>{expense.tag}</td>
                     <td>{expense.method}</td>
                     <td>{Number(expense.value).toFixed(2)}</td>
@@ -135,7 +135,7 @@ class Wallet extends React.Component {
 
                     </td>
 
-                    <td className="td-Real">Real</td>
+                    <td>Real</td>
                     <td>
                       <button
                         type="button"
@@ -162,7 +162,6 @@ class Wallet extends React.Component {
             </tbody>
           </table>
         </div>
-
       </div>);
   }
 }

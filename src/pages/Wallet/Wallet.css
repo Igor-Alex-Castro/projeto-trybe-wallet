@@ -26,7 +26,6 @@ td, th {
   padding: 8px;
 }
 tbody tr:nth-child(even) {background-color: #78a2eb21}
-
 td:first-of-type {
   border-right-color: transparent;
 }
@@ -65,20 +64,13 @@ td:first-of-type {
   }
 }
 
-@media only screen and (max-width : 600px) {
+@media (max-width : 700px) and (min-width: 200px) {
   table{
     width: 80vw;
     margin: auto;
-    border-radius: 5px solid ;
   }
   table thead{
     font-size: 8px;
-  }
-  .td-descripion{
-    display: none;
-  }
-  .td-Real{
-    display: none;
   }
   .container-table{
     width: 100vw;
